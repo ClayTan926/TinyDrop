@@ -1,0 +1,61 @@
+name: tinydrop
+description: 小水滴大习惯
+
+version: 0.0.1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  #国际化
+  flutter_localizations:
+    sdk: flutter
+
+  # State
+  provider: ^3.2.0
+
+  # Base Component
+  #获取设备信息
+  device_info: ^0.4.1+3
+  package_info: ^0.4.0+12
+
+  # 网络
+  dio: ^3.0.7
+  cookie_jar: ^1.0.0
+  shared_preferences: ^0.5.4+8
+
+  # 本地json对象存储
+  localstorage: ^3.0.1+4
+
+  # UI
+  oktoast: ^2.2.0
+  pull_to_refresh: ^1.5.7
+  flutter_swiper: ^1.1.6
+  cached_network_image: ^1.1.3
+  flutter_calendar: ^0.0.8
+  # 类iOS侧滑菜单
+  flutter_slidable: 0.5.3
+  # 闪耀效果
+  shimmer: ^1.0.0
+  # third_app
+  image_picker: ^0.6.1+4 #图片选择器
+  # 评分
+  launch_review: ^2.0.0
+
+  json_model: ^0.0.2
+  cupertino_icons: ^0.1.2
+  json_serializable: ^2.0.0
+  json_annotation: ^2.2.0
+  build_runner: ^1.0.0
+  event_bus: ^1.1.0
+  permission_handler: ^4.0.0 #权限管理，3.1.0以上需要支持androidx
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+
+  uses-material-design: true
