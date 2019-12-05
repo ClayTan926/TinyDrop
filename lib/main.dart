@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:oktoast/oktoast.dart';
 import 'package:provider/provider.dart';
+import 'package:tinydrop/common/permission_manage.dart';
 import 'package:tinydrop/config/ui_adapter_config.dart';
 
 import 'config/global_config.dart';
@@ -8,6 +10,7 @@ import 'config/global_config.dart';
 main() async {
   Provider.debugCheckInvalidValueType = null;
   WidgetsFlutterBinding.ensureInitialized();
+  PermissionManage.init();
   GlobalConfig.init();
   runApp(MyApp());
   // Android状态栏透明 splash为白色,所以调整状态栏文字为黑色
@@ -17,15 +20,16 @@ main() async {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return OKToast(
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: MyHomePage(title: 'Flutter Demo Home Page'),
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
